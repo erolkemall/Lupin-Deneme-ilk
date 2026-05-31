@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ürünlerimiz - Lupin Preschool</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <nav class="menu">
+      <a id="nav-home" href="index.html">Anasayfa</a>
+      <a id="nav-about" href="hakkimizda.html">Hakkımızda</a>
+      <a id="nav-contact" href="iletisim.html">İletişim</a>
+      <a id="nav-product" href="urunler.html" style="color: #6BCB77;">Ürünler</a>
+    </nav>
+
+    <div class="header-btns">
+      <button class="lang-btn" onclick="changeLang()">EN</button>
+      
+      <div class="header-cart-wrap" onclick="toggleCartSidebar()">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-count" class="cart-badge">0</span>
+      </div>
+
+      <button id="cta-btn" class="cta-btn" onclick="openInfoModal()">Bilgi Al</button>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-sidebar-header">
+    <h3>Sepetim</h3>
+    <button class="cart-sidebar-close" onclick="toggleCartSidebar()">×</button>
+  </div>
+  <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span>Toplam:</span>
+      <span id="cart-total-price">0 TL</span>
+    </div>
+    <button class="cta-btn cart-checkout-btn" onclick="alert('Satın alma entegrasyonu bir sonraki aşamadır! ✨')">Alışverişi Tamamla</button>
+  </div>
+</div>
+
+<section class="products-banner-wrap">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <h1>Eğitim Materyalleri & Ürünlerimiz</h1>
+    <p>Çocuklarımızın gelişimini destekleyen, doğallığı ve pedagojiyi buluşturan özel seçkimiz.</p>
+  </div>
+</section>
+
+<section class="products-main-section container">
+  <div class="products-premium-grid">
+    <div class="p-premium-card" data-category="wooden">
+      <div class="p-badge text-wooden">Doğal Ahşap</div>
+      <div class="p-image-box">
+        <img src="img/urun1.jpg" alt="x">
+      </div>
+      <div class="p-info-box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>İnce motor becerilerini ve uzamsal zekayı destekleyen, organik gürgen ağacından el yapımı set.</p>
+        <div class="p-action-row">
+          <span class="p-price">450 TL</span>
+          <button class="cta-btn p-view-btn" onclick="addToCart('Lorem, ipsum dolor. (Ahşap Ürün)', 450, 'img/urun1.jpg')">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-premium-card" data-category="books">
+      <div class="p-badge text-books">Doğa Serisi</div>
+      <div class="p-image-box">
+        <img src="img/urun2.jpg" alt="Lupin Kitap Seti">
+      </div>
+      <div class="p-info-box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Okul öncesi yaş grubuna özel; çevre bilinci, yardımlaşma ve doğa sevgisini aşılayan hikayeler.</p>
+        <div class="p-action-row">
+          <span class="p-price">380 TL</span>
+          <button class="cta-btn p-view-btn" onclick="addToCart('Lorem, ipsum dolor. (Kitap Seti)', 380, 'img/urun2.jpg')">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-premium-card" data-category="kits">
+      <div class="p-badge text-kits">Duyusal Oyun</div>
+      <div class="p-image-box">
+        <img src="img/urun3.jpg" alt="Duyusal Keşif Oyunu">
+      </div>
+      <div class="p-info-box">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Çocukların dokunma, koku ve görme algılarını harmanlayarak dünyayı keşfetmesini sağlayan özel materyal.</p>
+        <div class="p-action-row">
+          <span class="p-price">620 TL</span>
+          <button class="cta-btn p-view-btn" onclick="addToCart('Lorem, ipsum dolor. (Duyusal Kit)', 620, 'img/urun3.jpg')">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-premium-card" data-category="wooden">
+      <div class="p-badge text-wooden">Denge Oyunu</div>
+      <div class="p-image-box">
+        <img src="img/galeri1.jpg" alt="Ahşap Denge Blokları">
+      </div>
+      <div class="p-info-box">
+        <h3>lorem3</h3>
+        <p>Odaklanma süresini uzatan, çocukların el-göz koordinasyonunu zirveye çıkaran eğlenceli denge blokları.</p>
+        <div class="p-action-row">
+          <span class="p-price">510 TL</span>
+          <button class="cta-btn p-view-btn" onclick="addToCart('lorem3 (Denge Blokları)', 510, 'img/galeri1.jpg')">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col brand-col">
+      <h3><span class="color-green">Lupin</span> Preschool</h3>
+      <p>Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
+      <div class="social-links">
+        <a href="#">📷</a> <a href="#">📘</a> <a href="#">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col links-col">
+      <h4>Hızlı Bağlantılar</h4>
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+    <div class="footer-col contact-col">
+      <h4>İletişim</h4>
+      <p>📍 Bursa Uludağ Üniversitesi<br>Görükle Kampüsü, Nilüfer / Bursa</p>
+      <p>📞 +90 555 123 45 67</p>
+      <p>✉️ info@lupin.tr</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<div id="info-modal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close-x" onclick="closeInfoModal()">×</button>
+    <div class="modal-grid">
+      <div class="modal-quick-info">
+        <h3>Hızlı İletişim</h3>
+        <p class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
+        <div class="modal-info-list">
+          <div class="m-info-item">
+            <span class="m-item-icon">📞</span>
+            <div class="m-item-text">
+              <h4>Telefon</h4>
+              <p>+90 555 123 45 67</p>
+            </div>
+          </div>
+          <div class="m-info-item">
+            <span class="m-item-icon">✉️</span>
+            <div class="m-item-text">
+              <h4>E-Posta</h4>
+              <p>info@lupin.tr</p>
+            </div>
+          </div>
+          <div class="m-info-item">
+            <span class="m-item-icon">📍</span>
+            <div class="m-item-text">
+              <h4>Konum</h4>
+              <p>Uludağ Üni. Görükle Kampüsü</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-form-area">
+        <h3>Bilgi Talep Formu</h3>
+        <form action="#" method="POST" class="modal-minimal-form" onsubmit="handleInfoSubmit(event)">
+          <div class="m-form-group">
+            <label for="m-name">Adınız Soyadınız</label>
+            <input type="text" id="m-name" required placeholder="Ahmet Yılmaz">
+          </div>
+          <div class="m-form-group">
+            <label for="m-phone">Telefon Numaranız</label>
+            <input type="tel" id="m-phone" required placeholder="05xx xxx xx xx">
+          </div>
+          <div class="m-form-group">
+            <label for="m-child-age">Çocuğunuzun Yaşı</label>
+            <select id="m-child-age" required>
+              <option value="" disabled selected>Seçiniz...</option>
+              <option value="4">4 Yaş Grubu</option>
+              <option value="5">5 Yaş Grubu</option>
+              <option value="6">6 Yaş Grubu</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEPET SİSTEMİ ÇALIŞMASI İÇİN -->
+<script src="script.js"></script>
+
+</body>
+</html>

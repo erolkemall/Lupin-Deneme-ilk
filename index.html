@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anasayfa - Lupin Preschool</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <nav class="menu">
+      <a id="nav-home" href="index.html" style="color: #6BCB77;">Anasayfa</a>
+      <a id="nav-about" href="hakkimizda.html">Hakkımızda</a>
+      <a id="nav-contact" href="iletisim.html">İletişim</a>
+      <a id="nav-product" href="urunler.html">Ürünler</a>
+    </nav>
+
+    <div class="header-btns">
+      <button class="lang-btn" onclick="changeLang()">EN</button>
+      
+      <div class="header-cart-wrap" onclick="toggleCartSidebar()">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-count" class="cart-badge">0</span>
+      </div>
+
+      <button id="cta-btn" class="cta-btn" onclick="openInfoModal()">Bilgi Al</button>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-sidebar-header">
+    <h3>Sepetim</h3>
+    <button class="cart-sidebar-close" onclick="toggleCartSidebar()">×</button>
+  </div>
+  <div id="cart-sidebar-items" class="cart-sidebar-items">
+    </div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span>Toplam:</span>
+      <span id="cart-total-price">0 TL</span>
+    </div>
+    <button class="cta-btn cart-checkout-btn" onclick="alert('Satın alma entegrasyonu bir sonraki aşamadır! ✨')">Alışverişi Tamamla</button>
+  </div>
+</div>
+
+<div class="slider">
+  <div class="slide active" style="background-image: url('img/slide1.png')"></div>
+  <div class="slide" style="background-image: url('img/slide2.jpg')"></div>
+  <div class="slide" style="background-image: url('img/slide3.jpg')"></div>
+
+  <div class="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+
+  <button class="prev" onclick="prevSlide()">❮</button>
+  <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+<section class="tabs-container">
+  <div class="tabs-header">
+    <button class="tab-link active" onclick="openTab(event, 'egitim')">
+      <span class="tab-icon">🎓</span>
+      <span class="tab-text">Eğitimimiz</span>
+    </button>
+    <button class="tab-link" onclick="openTab(event, 'yemek')">
+      <span class="tab-icon">🍎</span>
+      <span class="tab-text">Yemek Menüsü</span>
+    </button>
+    <button class="tab-link" onclick="openTab(event, 'etkinlik')">
+      <span class="tab-icon">🎨</span>
+      <span class="tab-text">Etkinlikler</span>
+    </button>
+  </div>
+
+  <div class="tabs-body">
+    <div id="egitim" class="tab-content active">
+      <h3>Modern Eğitim Yaklaşımı</h3>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    
+    <div id="yemek" class="tab-content">
+      <h3>Sağlıklı Beslenme</h3>
+      <p>Diyetisyen onaylı, tamamen organik ve taze ürünlerle hazırlanan günlük menülerimiz.</p>
+      <div class="table-responsive">
+        <table class="menu-table">
+          <thead>
+            <tr>
+              <th>Günler</th>
+              <th>Sabah Kahvaltısı 🥛</th>
+              <th>Öğle Yemeği 🍲</th>
+              <th>İkindi Ara Öğün 🍎</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pazartesi</strong></td>
+              <td>Haşlanmış Yumurta, Beyaz Peynir, Zeytin, Tam Buğday Ekmeği, Ihlamur</td>
+              <td>Tel Şehriye Çorbası, Fırın Köfte, Patates Püresi, Yoğurt</td>
+              <td>Mevsim Meyveleri Tabağı, Kavrulmamış Kuruyemiş</td>
+            </tr>
+            <tr>
+              <td><strong>Salı</strong></td>
+              <td>Peynirli Omlet, Çeri Domates, Salatalık, Süt</td>
+              <td>Tarhana Çorbası, Tavuklu Pilav, Mevsim Salata</td>
+              <td>Ev Yapımı Havuçlu Kek, Süt</td>
+            </tr>
+            <tr>
+              <td><strong>Çarşamba</strong></td>
+              <td>Krep, Bal ve Tereyağı, Kaşar Peyniri, Taze Sıkılmış Meyve Suyu</td>
+              <td>Süzme Mercimek Çorbası, Kıymalı Makarna, Ayran</td>
+              <td>Yoğurtlu Meyve Salatası</td>
+            </tr>
+            <tr>
+              <td><strong>Perşembe</strong></td>
+              <td>Yulaf Ezmesi, Muz Dilimleri, Süt, Ceviz İçi</td>
+              <td>Yayla Çorbası, Etli Mevsim Türlüsü, Bulgur Pilavı</td>
+              <td>Peynirli Ev Poğaçası, Bitki Çayı</td>
+            </tr>
+            <tr>
+              <td><strong>Cuma</strong></td>
+              <td>Menemen, Zeytin, Peynir Tabağı, Süt</td>
+              <td>Ezogelin Çorbası, Fırında Somon, Yeşil Salata</td>
+              <td>Sütlaç</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="etkinlik" class="tab-content">
+      <h3>Eğlenceli Etkinlikler</h3>
+      <p>Yüzme, drama, robotik kodlama ve satranç derslerimizle çok yönlü gelişim.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mega-gallery">
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <img src="img/galeri1.jpg" alt="Aktivite 1">
+      <div class="overlay"><span>Oyun Alanımız</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="img/galeri2.jpg" alt="Aktivite 2">
+      <div class="overlay"><span>Eğitim Sınıfları</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="img/galeri3.jpg" alt="Aktivite 3">
+      <div class="overlay"><span>Sanat Atölyesi</span></div>
+    </div>
+    <div class="gallery-card">
+      <img src="img/galeri4.jpg" alt="Aktivite 4">
+      <div class="overlay"><span>Yemekhane</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col brand-col">
+      <h3><span class="color-green">Lupin</span> Preschool</h3>
+      <p>Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
+      <div class="social-links">
+        <a href="#">📷</a><a href="#">📘</a><a href="#">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col links-col">
+      <h4>Hızlı Bağlantılar</h4>
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+    <div class="footer-col contact-col">
+      <h4>İletişim</h4>
+      <p>📍 Bursa Uludağ Üniversitesi<br>Görükle Kampüsü, Nilüfer / Bursa</p>
+      <p>📞 +90 555 123 45 67</p>
+      <p>✉️ info@lupin.tr</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<div id="info-modal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close-x" onclick="closeInfoModal()">×</button>
+    <div class="modal-grid">
+      <div class="modal-quick-info">
+        <h3>Hızlı İletişim</h3>
+        <p class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
+        <div class="modal-info-list">
+          <div class="m-info-item">
+            <span class="m-item-icon">📞</span>
+            <div class="m-item-text">
+              <h4>Telefon</h4>
+              <p>+90 555 123 45 67</p>
+            </div>
+          </div>
+          <div class="m-info-item">
+            <span class="m-item-icon">✉️</span>
+            <div class="m-item-text">
+              <h4>E-Posta</h4>
+              <p>info@lupin.tr</p>
+            </div>
+          </div>
+          <div class="m-info-item">
+            <span class="m-item-icon">📍</span>
+            <div class="m-item-text">
+              <h4>Konum</h4>
+              <p>Uludağ Üni. Görükle Kampüsü</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-form-area">
+        <h3>Bilgi Talep Formu</h3>
+        <form action="#" method="POST" class="modal-minimal-form" onsubmit="handleInfoSubmit(event)">
+          <div class="m-form-group">
+            <label for="m-name">Adınız Soyadınız</label>
+            <input type="text" id="m-name" required placeholder="Ahmet Yılmaz">
+          </div>
+          <div class="m-form-group">
+            <label for="m-phone">Telefon Numaranız</label>
+            <input type="tel" id="m-phone" required placeholder="05xx xxx xx xx">
+          </div>
+          <div class="m-form-group">
+            <label for="m-child-age">Çocuğunuzun Yaşı</label>
+            <select id="m-child-age" required>
+              <option value="" disabled selected>Seçiniz...</option>
+              <option value="4">4 Yaş Grubu</option>
+              <option value="5">5 Yaş Grubu</option>
+              <option value="6">6 Yaş Grubu</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div id="video-announcement-popup" class="popup-overlay">
+  <div class="popup-card video-popup-card">
+    <button class="modal-close-x" onclick="closeVideoPopup()">×</button>
+    <div class="popup-icon">🎬</div>
+    <h2>Tanıtım Videomuz Yayınlandı!</h2>
+    <p>Lupin Preschool'un neşeli dünyasını, eğitim alanlarimizi ve mutlu çocuklarımızı yakından tanımak için videomuzu izleyin.</p>
+    
+    <div class="popup-video-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Lupin Preschool Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <button class="cta-btn popup-close-btn" onclick="closeVideoPopup()">Harika, Keşfetmeye Başla! ✨</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -40,16 +40,16 @@
 
 <div id="cart-sidebar" class="cart-sidebar">
   <div class="cart-sidebar-header">
-    <h3>Sepetim</h3>
+    <h3 id="cart-title">Sepetim</h3>
     <button class="cart-sidebar-close" onclick="toggleCartSidebar()">×</button>
   </div>
   <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
   <div class="cart-sidebar-footer">
     <div class="cart-total-row">
-      <span>Toplam:</span>
+      <span id="cart-total-text">Toplam:</span>
       <span id="cart-total-price">0 TL</span>
     </div>
-    <button class="cta-btn cart-checkout-btn" onclick="alert('Satın alma entegrasyonu bir sonraki aşamadır! ✨')">Alışverişi Tamamla</button>
+    <button id="cart-checkout-btn" class="cta-btn cart-checkout-btn" onclick="checkoutAlert()">Alışverişi Tamamla</button>
   </div>
 </div>
 
@@ -57,15 +57,15 @@
   <div class="banner-overlay"></div>
   <div class="banner-content">
     <h1 id="about-banner-title">Biz Kimiz?</h1>
-    <p id="about-banner-desc">Lupin Preschool'da childların hayal dünyasını yeşertiyoruz.</p>
+    <p id="about-banner-desc">Lupin Preschool'da çocukların hayal dünyasını yeşertiyoruz.</p>
   </div>
 </section>
 
 <section class="about-story">
   <div class="story-text">
-    <h2>Hikayemiz</h2>
-    <p>Lupin Preschool olarak, her çocuğun içindeki potansiyeli sevgiyle ortaya çıkarmak için yola çıktık. Amacımız sadece akademik bir temel atmak değil; kendine güvenen, doğayı seven, sorgulayan ve mutlu bireyler yetiştirmektir.</p>
-    <p>Modern eğitim yaklaşımlarını, geleneksel aile sıcaklığı ile harmanlıyor; çocuklarımızın ikinci evi olmaktan gurur duyuyoruz. Senin de aileni bu yeşil ve mutlu yuvada görmekten mutluluk duyarız.</p>
+    <h2 id="story-title">Hikayemiz</h2>
+    <p id="story-p1">Lupin Preschool olarak, her çocuğun içindeki potansiyeli sevgiyle ortaya çıkarmak için yola çıktık. Amacımız sadece akademik bir temel atmak değil; kendine güvenen, doğayı seven, sorgulayan ve mutlu bireyler yetiştirmektir.</p>
+    <p id="story-p2">Modern eğitim yaklaşımlarını, geleneksel aile sıcaklığı ile harmanlıyor; çocuklarımızın ikinci evi olmaktan gurur duyuyoruz. Senin de aileni bu yeşil ve mutlu yuvada görmekten mutlu duyarız.</p>
   </div>
   <div class="story-image">
     <img src="img/galeri4.jpg" alt="Mutlu Çocuklar">
@@ -73,22 +73,22 @@
 </section>
 
 <section class="our-values">
-  <h2>Neden Lupin Preschool?</h2>
+  <h2 id="values-main-title">Neden Lupin Preschool?</h2>
   <div class="values-grid">
     <div class="value-card">
       <div class="icon">🎨</div>
-      <h3>Oyun Temelli Öğrenme</h3>
-      <p>Çocuklar en iyi oynarken öğrenir. Müfredatımız, keşfetmeye ve merak etmeye dayalı oyunlarla doludur.</p>
+      <h3 id="val-card-t1">Oyun Temelli Öğrenme</h3>
+      <p id="val-card-d1">Çocuklar en iyi oynarken öğrenir. Müfredatımız, keşfetmeye ve merak etmeye dayalı oyunlarla doludur.</p>
     </div>
     <div class="value-card">
       <div class="icon">🌱</div>
-      <h3>Doğa ile İç İçe</h3>
-      <p>Yeşili og doğayı seven çocuklar yetiştiriyoruz. Açık hava etkinlikleriyle fiziksel gelişimlerini destekliyoruz.</p>
+      <h3 id="val-card-t2">Doğa ile İç İçe</h3>
+      <p id="val-card-d2">Yeşili ve doğayı seven çocuklar yetiştiriyoruz. Açık hava etkinlikleriyle fiziksel gelişimlerini destekliyoruz.</p>
     </div>
     <div class="value-card">
       <div class="icon">🛡️</div>
-      <h3>Güvenli Gelecek</h3>
-      <p>Fiziksel ve duygusal güvenliği en üst planda tutarak, özgürce hareket edebilecekleri modern sınıflar sunuyoruz.</p>
+      <h3 id="val-card-t3">Güvenli Gelecek</h3>
+      <p id="val-card-d3">Fiziksel ve duygusal güvenliği en üst planda tutarak, özgürce hareket edebilecekleri modern sınıflar sunuyoruz.</p>
     </div>
   </div>
 </section>
@@ -97,29 +97,29 @@
   <div class="footer-container">
     <div class="footer-col brand-col">
       <h3><span class="color-green">Lupin</span> Preschool</h3>
-      <p>Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
+      <p id="footer-brand-text">Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
       <div class="social-links">
         <a href="#">📷</a><a href="#">📘</a><a href="#">🐦</a>
       </div>
     </div>
     <div class="footer-col links-col">
-      <h4>Hızlı Bağlantılar</h4>
+      <h4 id="footer-links-title">Hızlı Bağlantılar</h4>
       <ul>
-        <li><a href="index.html">Anasayfa</a></li>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="urunler.html">Ürünler</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a id="f-nav-home" href="index.html">Anasayfa</a></li>
+        <li><a id="f-nav-about" href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a id="f-nav-product" href="urunler.html">Ürünler</a></li>
+        <li><a id="f-nav-contact" href="iletisim.html">İletişim</a></li>
       </ul>
     </div>
     <div class="footer-col contact-col">
-      <h4>İletişim</h4>
+      <h4 id="footer-contact-title">İletişim</h4>
       <p>📍 Bursa Uludağ Üniversitesi<br>Görükle Kampüsü, Nilüfer / Bursa</p>
       <p>📞 +90 555 123 45 67</p>
       <p>✉️ info@lupin.tr</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
+    <p id="footer-copyright">© 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
   </div>
 </footer>
 
@@ -128,56 +128,65 @@
     <button class="modal-close-x" onclick="closeInfoModal()">×</button>
     <div class="modal-grid">
       <div class="modal-quick-info">
-        <h3>Hızlı İletişim</h3>
-        <p class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
+        <h3 id="modal-q-title">Hızlı İletişim</h3>
+        <p id="modal-q-sub" class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
         <div class="modal-info-list">
           <div class="m-info-item">
             <span class="m-item-icon">📞</span>
             <div class="m-item-text">
-              <h4>Telefon</h4>
+              <h4 id="m-list-1">Telefon</h4>
               <p>+90 555 123 45 67</p>
             </div>
           </div>
           <div class="m-info-item">
             <span class="m-item-icon">✉️</span>
             <div class="m-item-text">
-              <h4>E-Posta</h4>
+              <h4 id="m-list-2">E-Posta</h4>
               <p>info@lupin.tr</p>
             </div>
           </div>
           <div class="m-info-item">
             <span class="m-item-icon">📍</span>
             <div class="m-item-text">
-              <h4>Konum</h4>
-              <p>Uludağ Üni. Görükle Kampüsü</p>
+              <h4 id="m-list-3">Konum</h4>
+              <p id="m-list-3-val">Uludağ Üni. Görükle Kampüsü</p>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-form-area">
-        <h3>Bilgi Talep Formu</h3>
+        <h3 id="modal-f-title">Bilgi Talep Formu</h3>
         <form action="#" method="POST" class="modal-minimal-form" onsubmit="handleInfoSubmit(event)">
           <div class="m-form-group">
-            <label for="m-name">Adınız Soyadınız</label>
+            <label id="lbl-m-name" for="m-name">Adınız Soyadınız</label>
             <input type="text" id="m-name" required placeholder="Ahmet Yılmaz">
           </div>
           <div class="m-form-group">
-            <label for="m-phone">Telefon Numaranız</label>
+            <label id="lbl-m-phone" for="m-phone">Telefon Numaranız</label>
             <input type="tel" id="m-phone" required placeholder="05xx xxx xx xx">
           </div>
           <div class="m-form-group">
-            <label for="m-child-age">Çocuğunuzun Yaşı</label>
+            <label id="lbl-m-age" for="m-child-age">Çocuğunuzun Yaşı</label>
             <select id="m-child-age" required>
-              <option value="" disabled selected>Seçiniz...</option>
-              <option value="4">4 Yaş Grubu</option>
-              <option value="5">5 Yaş Grubu</option>
-              <option value="6">6 Yaş Grubu</option>
+              <option id="opt-m-select" value="" disabled selected>Seçiniz...</option>
+              <option id="opt-m-age4" value="4">4 Yaş Grubu</option>
+              <option id="opt-m-age5" value="5">5 Yaş Grubu</option>
+              <option id="opt-m-age6" value="6">6 Yaş Grubu</option>
             </select>
           </div>
-          <button type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
+          <button id="m-submit-btn" type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
         </form>
       </div>
     </div>
+  </div>
+</div>
+
+<div id="success-popup" class="popup-overlay">
+  <div class="popup-card">
+    <div class="popup-icon">✨</div>
+    <h2 id="pop-success-title">Mesajınız Alındı!</h2>
+    <p id="pop-success-desc">Lupin Preschool ailesine gösterdiğiniz ilgi için teşekkür ederiz. En kısa sürede sizinle iletişime geçeceğiz.</p>
+    <button id="pop-success-btn" class="cta-btn popup-close-btn" onclick="closePopup()">Harika!</button>
   </div>
 </div>
 

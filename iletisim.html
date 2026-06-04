@@ -40,52 +40,52 @@
 
 <div id="cart-sidebar" class="cart-sidebar">
   <div class="cart-sidebar-header">
-    <h3>Sepetim</h3>
+    <h3 id="cart-title">Sepetim</h3>
     <button class="cart-sidebar-close" onclick="toggleCartSidebar()">×</button>
   </div>
   <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
   <div class="cart-sidebar-footer">
     <div class="cart-total-row">
-      <span>Toplam:</span>
+      <span id="cart-total-text">Toplam:</span>
       <span id="cart-total-price">0 TL</span>
     </div>
-    <button class="cta-btn cart-checkout-btn" onclick="alert('Satın alma entegrasyonu bir sonraki aşamadır! ✨')">Alışverişi Tamamla</button>
+    <button id="cart-checkout-btn" class="cta-btn cart-checkout-btn" onclick="checkoutAlert()">Alışverişi Tamamla</button>
   </div>
 </div>
 
 <section class="about-banner contact-banner">
   <div class="banner-overlay"></div>
   <div class="banner-content">
-    <h1>Bizimle İletişime Geçin</h1>
-    <p>Sorularınız, önerileriniz veya kayıt bilgi talepleriniz için her zaman buradayız.</p>
+    <h1 id="contact-banner-title">Bizimle İletişime Geçin</h1>
+    <p id="contact-banner-desc">Sorularınız, önerileriniz veya kayıt bilgi talepleriniz için her zaman buradayız.</p>
   </div>
 </section>
 
 <section class="contact-section container">
   <div class="contact-grid">
     <div class="contact-info-wrap">
-      <h2>Sizi Dinlemek İçin Sabırsızlanıyoruz</h2>
-      <p class="contact-desc">Lupin Preschool ailesine katılmak, eğitim modelimiz hakkında detaylı bilgi almak veya kampüsümüzü ziyaret etmek için randevu oluşturabilirsiniz.</p>
+      <h2 id="contact-main-title">Sizi Dinlemek İçin Sabırsızlanıyoruz</h2>
+      <p id="contact-main-desc" class="contact-desc">Lupin Preschool ailesine katılmak, eğitim modelimiz hakkında detaylı bilgi almak veya kampüsümüzü ziyaret etmek için randevu oluşturabilirsiniz.</p>
       
       <div class="contact-cards">
         <div class="c-card">
           <span class="c-icon">📍</span>
           <div class="c-text">
-            <h3>Adresimiz</h3>
+            <h3 id="c-card-t1">Adresimiz</h3>
             <p>Bursa Uludağ Üniversitesi,<br>Görükle Kampüsü, Nilüfer / Bursa</p>
           </div>
         </div>
         <div class="c-card">
           <span class="c-icon">📞</span>
           <div class="c-text">
-            <h3>Telefon</h3>
+            <h3 id="c-card-t2">Telefon</h3>
             <p>+90 555 123 45 67</p>
           </div>
         </div>
         <div class="c-card">
           <span class="c-icon">✉️</span>
           <div class="c-text">
-            <h3>E-Posta</h3>
+            <h3 id="c-card-t3">E-Posta</h3>
             <p>info@lupin.tr</p>
           </div>
         </div>
@@ -93,35 +93,35 @@
     </div>
 
     <div class="contact-form-card">
-      <h3>Mesaj Gönderin</h3>
+      <h3 id="c-form-title">Mesaj Gönderin</h3>
       <form action="#" method="POST" class="lupin-form">
         <div class="form-group">
-          <label for="form-name">Adınız Soyadınız</label>
+          <label id="lbl-c-name" for="form-name">Adınız Soyadınız</label>
           <input type="text" id="form-name" required placeholder="Örn. Ahmet Yılmaz">
         </div>
         
         <div class="form-row">
           <div class="form-group">
-            <label for="form-email">E-Posta Adresiniz</label>
+            <label id="lbl-c-mail" for="form-email">E-Posta Adresiniz</label>
             <input type="email" id="form-email" required placeholder="name@example.com">
           </div>
           <div class="form-group">
-            <label for="form-phone">Telefon Numaranız</label>
+            <label id="lbl-c-phone" for="form-phone">Telefon Numaranız</label>
             <input type="tel" id="form-phone" placeholder="05xx xxx xx xx">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="form-subject">Konu</label>
+          <label id="lbl-c-subject" for="form-subject">Konu</label>
           <input type="text" id="form-subject" required placeholder="Kayıt İşlemleri, Bilgi Talebi vb.">
         </div>
 
         <div class="form-group">
-          <label for="form-message">Mesajınız</label>
+          <label id="lbl-c-msg" for="form-message">Mesajınız</label>
           <textarea id="form-message" rows="5" required placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
         </div>
 
-        <button type="submit" class="cta-btn form-submit-btn">Mesajı Gönder</button>
+        <button id="c-submit-btn" type="submit" class="cta-btn form-submit-btn">Mesajı Gönder</button>
       </form>
     </div>
   </div>
@@ -137,96 +137,96 @@
   <div class="footer-container">
     <div class="footer-col brand-col">
       <h3><span class="color-green">Lupin</span> Preschool</h3>
-      <p>Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
+      <p id="footer-brand-text">Çocukların sevgiyle büyüdüğü, doğayla iç içe, oyun temelli mutlu bir gelecek hazırlıyoruz.</p>
       <div class="social-links">
         <a href="#">📷</a><a href="#">📘</a><a href="#">🐦</a>
       </div>
     </div>
     <div class="footer-col links-col">
-      <h4>Hızlı Bağlantılar</h4>
+      <h4 id="footer-links-title">Hızlı Bağlantılar</h4>
       <ul>
-        <li><a href="index.html">Anasayfa</a></li>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="urunler.html">Ürünler</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a id="f-nav-home" href="index.html">Anasayfa</a></li>
+        <li><a id="f-nav-about" href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a id="f-nav-product" href="urunler.html">Ürünler</a></li>
+        <li><a id="f-nav-contact" href="iletisim.html">İletişim</a></li>
       </ul>
     </div>
     <div class="footer-col contact-col">
-      <h4>İletişim</h4>
+      <h4 id="footer-contact-title">İletişim</h4>
       <p>📍 Bursa Uludağ Üniversitesi<br>Görükle Kampüsü, Nilüfer / Bursa</p>
       <p>📞 +90 555 123 45 67</p>
       <p>✉️ info@lupin.tr</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
+    <p id="footer-copyright">© 2026 Lupin Preschool. Tüm hakları saklıdır.</p>
   </div>
 </footer>
-
-<div id="success-popup" class="popup-overlay">
-  <div class="popup-card">
-    <div class="popup-icon">✨</div>
-    <h2>Mesajınız Alındı!</h2>
-    <p>Lupin Preschool ailesine gösterdiğiniz ilgi için teşekkür ederiz. En kısa sürede sizinle iletişime geçeceğiz.</p>
-    <button class="cta-btn popup-close-btn" onclick="closePopup()">Harika!</button>
-  </div>
-</div>
 
 <div id="info-modal" class="modal-overlay">
   <div class="modal-card">
     <button class="modal-close-x" onclick="closeInfoModal()">×</button>
     <div class="modal-grid">
       <div class="modal-quick-info">
-        <h3>Hızlı İletişim</h3>
-        <p class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
+        <h3 id="modal-q-title">Hızlı İletişim</h3>
+        <p id="modal-q-sub" class="modal-sub">Bizimle doğrudan iletişime geçebilir veya formu doldurarak sizi aramamızı isteyebilirsiniz.</p>
         <div class="modal-info-list">
           <div class="m-info-item">
             <span class="m-item-icon">📞</span>
             <div class="m-item-text">
-              <h4>Telefon</h4>
+              <h4 id="m-list-1">Telefon</h4>
               <p>+90 555 123 45 67</p>
             </div>
           </div>
           <div class="m-info-item">
             <span class="m-item-icon">✉️</span>
             <div class="m-item-text">
-              <h4>E-Posta</h4>
+              <h4 id="m-list-2">E-Posta</h4>
               <p>info@lupin.tr</p>
             </div>
           </div>
           <div class="m-info-item">
             <span class="m-item-icon">📍</span>
             <div class="m-item-text">
-              <h4>Konum</h4>
-              <p>Uludağ Üni. Görükle Kampüsü</p>
+              <h4 id="m-list-3">Konum</h4>
+              <p id="m-list-3-val">Uludağ Üni. Görükle Kampüsü</p>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-form-area">
-        <h3>Bilgi Talep Formu</h3>
+        <h3 id="modal-f-title">Bilgi Talep Formu</h3>
         <form action="#" method="POST" class="modal-minimal-form" onsubmit="handleInfoSubmit(event)">
           <div class="m-form-group">
-            <label for="m-name">Adınız Soyadınız</label>
+            <label id="lbl-m-name" for="m-name">Adınız Soyadınız</label>
             <input type="text" id="m-name" required placeholder="Ahmet Yılmaz">
           </div>
           <div class="m-form-group">
-            <label for="m-phone">Telefon Numaranız</label>
+            <label id="lbl-m-phone" for="m-phone">Telefon Numaranız</label>
             <input type="tel" id="m-phone" required placeholder="05xx xxx xx xx">
           </div>
           <div class="m-form-group">
-            <label for="m-child-age">Çocuğunuzun Yaşı</label>
+            <label id="lbl-m-age" for="m-child-age">Çocuğunuzun Yaşı</label>
             <select id="m-child-age" required>
-              <option value="" disabled selected>Seçiniz...</option>
-              <option value="4">4 Yaş Grubu</option>
-              <option value="5">5 Yaş Grubu</option>
-              <option value="6">6 Yaş Grubu</option>
+              <option id="opt-m-select" value="" disabled selected>Seçiniz...</option>
+              <option id="opt-m-age4" value="4">4 Yaş Grubu</option>
+              <option id="opt-m-age5" value="5">5 Yaş Grubu</option>
+              <option id="opt-m-age6" value="6">6 Yaş Grubu</option>
             </select>
           </div>
-          <button type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
+          <button id="m-submit-btn" type="submit" class="cta-btn m-submit-btn">Beni Arayın ✨</button>
         </form>
       </div>
     </div>
+  </div>
+</div>
+
+<div id="success-popup" class="popup-overlay">
+  <div class="popup-card">
+    <div class="popup-icon">✨</div>
+    <h2 id="pop-success-title">Mesajınız Alındı!</h2>
+    <p id="pop-success-desc">Lupin Preschool ailesine gösterdiğiniz ilgi için teşekkür ederiz. En kısa sürede sizinle iletişime geçeceğiz.</p>
+    <button id="pop-success-btn" class="cta-btn popup-close-btn" onclick="closePopup()">Harika!</button>
   </div>
 </div>
 
